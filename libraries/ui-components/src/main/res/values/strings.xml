@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="everything">Everything</string>
+    <string name="top_headlines">Top Headlines</string>
+    <string name="search_hint">Search News</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort by</string>
+    <string name="menu_sort_relevancy">Relevancy</string>
+    <string name="menu_sort_popularity">Popularity</string>
+    <string name="menu_sort_publishedAt">Published At</string>
+
+    <string name="back">Back</string>
+    <string name="forward">Forward</string>
+    <string name="refresh">Refresh</string>
+    <string name="exit">Exit</string>
+
+    <string name="open_drawer">Open drawer</string>
+    <string name="close_drawer">Close drawer</string>
+
+    <string name="error_message_internet_connection">Network connection unstable. Please try again.</string>
+    <string name="error_message_error_happened">This shouldn\'t happen, and if it does then it\'s our fault, not yours. Try the request again shortly.</string>
+</resources>

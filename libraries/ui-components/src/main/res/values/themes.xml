@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!--  color palette-->
+        <item name="colorPrimary">@color/orange300</item>
+        <item name="colorPrimaryDark">@color/orange400</item>
+        <item name="colorAccent">@color/redA200</item>
+        <item name="colorCardHighlight">@color/orange100</item>
+
+        <!-- default theme override -->
+        <item name="backgroundList">#F2F2F6</item>
+        <item name="android:textColorTertiary">?android:textColorPrimary</item>
+        <item name="titleTextSize">@dimen/text_size_medium</item>
+        <item name="subtitleTextSize">@dimen/text_size_small</item>
+        <item name="android:textColorSecondary">@color/blackT50</item>
+        <item name="actionMenuTextColor">@color/blackT50</item>
+
+        <item name="backgroundDrawerHeader">@drawable/bg_drawer_light</item>
+    </style>
+
+    <style name="AppTheme" parent="BaseAppTheme" />
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/backgroundList">
+
+        <com.kennyc.view.MultiStateView
+            android:id="@+id/msv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:msv_viewState="content">
+
+            <io.github.hoanv810.uicomponents.widget.AppBarSwipeRefreshLayout
+                android:id="@+id/swipe_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingTop="@dimen/padding"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+            </io.github.hoanv810.uicomponents.widget.AppBarSwipeRefreshLayout>
+
+        </com.kennyc.view.MultiStateView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

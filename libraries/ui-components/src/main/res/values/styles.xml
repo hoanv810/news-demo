@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppToolbarTheme" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="searchViewStyle">@style/AppToolbarSearchView</item>
+        <item name="android:textColorSecondary">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AppToolbarSearchView" parent="Widget.AppCompat.SearchView.ActionBar">
+        <item name="queryHint">@string/search_hint</item>
+    </style>
+
+    <style name="AppNavigationDrawer">
+        <item name="android:layout_width">320dp</item>
+    </style>
+
+    <style name="DrawerTextStyle">
+        <item name="android:textAppearance">@style/TextAppearance.App.Large</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">@dimen/padding</item>
+        <item name="android:paddingBottom">@dimen/padding</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:drawablePadding">32dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?android:attr/listPreferredItemHeight</item>
+    </style>
+
+    <style name="AppProgressBarHorizontalStyle" parent="Base.Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+        <item name="android:minHeight">2dp</item>
+        <item name="android:maxHeight">2dp</item>
+        <item name="android:progressDrawable">@drawable/progress_bar</item>
+    </style>
+
+    <style name="TextAppearance.App.Large" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+    </style>
+
+    <style name="TextAppearance.App.Title" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:fontFamily">@font/bold</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Content" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.SemiBold" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:fontFamily">@font/regular</item>
+    </style>
+
+</resources>

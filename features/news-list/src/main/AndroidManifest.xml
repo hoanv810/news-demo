@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="io.github.hoanv810.dynamicfeature.news_list"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <activity
+            android:name="io.github.hoanv810.dynamicfeature.newslist.activity.TopHeadlinesActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="io.github.hoanv810.demo.topheadlines.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="io.github.hoanv810.dynamicfeature.newslist.activity.EverythingActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="io.github.hoanv810.demo.everything.open" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+</manifest>

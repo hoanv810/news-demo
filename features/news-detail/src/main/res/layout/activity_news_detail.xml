@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="article"
+            type="io.github.hoanv810.core.network.response.Article" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary"
+                android:minHeight="0dp"
+                android:theme="@style/AppToolbarTheme" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding"
+                android:paddingEnd="@dimen/horizontal_margin"
+                android:paddingStart="@dimen/horizontal_margin"
+                android:paddingTop="@dimen/padding"
+                tools:background="?attr/colorPrimary">
+
+                <TextView
+                    android:id="@+id/article_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:ellipsize="end"
+                    android:text="@{article.title}"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                    android:textSize="?attr/titleTextSize"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
+
+                <LinearLayout
+                    android:id="@+id/meta_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    app:layout_constraintTop_toBottomOf="@id/article_title">
+
+                    <TextView
+                        android:id="@+id/article_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{article.source.name}"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="?attr/subtitleTextSize"
+                        android:textStyle="italic"
+                        android:visibility="gone"
+                        tools:text="example.com"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/article_date"
+                        articleDate="@{article.date}"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/padding"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Subtitle"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="?attr/subtitleTextSize"
+                        tools:text="22 Feb 2021" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <io.github.hoanv810.uicomponents.widget.CacheableWebView
+            android:id="@+id/article_webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+        <ProgressBar
+            android:id="@+id/article_progress"
+            style="@style/AppProgressBarHorizontalStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/article_webview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

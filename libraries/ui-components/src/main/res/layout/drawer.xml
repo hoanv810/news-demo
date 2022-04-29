@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="io.github.hoanv810.uicomponents.base.DrawerActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/drawer_header_height">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="?attr/backgroundDrawerHeader" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/blackT12" />
+
+    <io.github.hoanv810.uicomponents.widget.TintableTextView
+        android:id="@+id/drawer_top_headlines"
+        style="@style/DrawerTextStyle"
+        android:text="@string/top_headlines"
+        app:iconStart="@drawable/ic_trending_up_white_24dp" />
+
+    <io.github.hoanv810.uicomponents.widget.TintableTextView
+        android:id="@+id/drawer_everything"
+        style="@style/DrawerTextStyle"
+        android:text="@string/everything"
+        app:iconStart="@drawable/ic_new_releases_white_24dp" />
+
+</LinearLayout>
